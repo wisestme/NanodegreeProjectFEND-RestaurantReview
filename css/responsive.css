@@ -1,6 +1,20 @@
+@media screen and (min-width: 500px) {
+	#restaurant-container h1 {
+    font-size: 12pt;
+	}
+	.inside #footer {
+  width: 40%;
+}
+}
+
 @media screen and (min-width: 600px) {
+	#restaurant-container h1 {
+    font-size: 14pt;
+	}
+	.inside #footer {
+  width: 42%;
+}
 	nav h1 a {
-  
   font-size: 16pt;
   font-weight: 400;
 }
@@ -22,6 +36,12 @@
 }
 
 @media screen and (min-width: 700px) {
+	.inside #footer {
+  	width: 43%;
+	}
+	#restaurant-container h1 {
+    font-weight: bolder;
+	}
 	#restaurants-list li {
 		width: 45%;
 		margin-right: auto;

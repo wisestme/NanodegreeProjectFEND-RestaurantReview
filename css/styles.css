@@ -222,7 +222,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 35%;
 }
 #restaurant-name {
   color: #f18200;
@@ -240,6 +240,7 @@ nav h1 a {
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
+  width: 80%;
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -260,7 +261,7 @@ nav h1 a {
   width: 50%;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 10px 80px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -280,7 +281,7 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 0 5px 20px;
   position: relative;
   width: 85%;
 }
@@ -289,4 +290,16 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+#restaurant-container h1{
+  padding-top: 30px;
+  font-size: 90%;
+  
+}
+#restaurant-hours {
+  width: 80%; 
+}
+#restaurant-hours td {
+  padding: 4px 0;
 }
