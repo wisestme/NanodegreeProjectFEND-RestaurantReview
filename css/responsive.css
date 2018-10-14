@@ -1,0 +1,45 @@
+@media screen and (min-width: 600px) {
+	nav h1 a {
+  
+  font-size: 16pt;
+  font-weight: 400;
+}
+	.filter-options h2 {
+  		font-size: 1.5rem;
+  		font-weight: bold;
+	}
+	#restaurants-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.filter-options select {
+  border: 2px solid #fff;
+  font-size: 14pt;
+  height: 40px;
+  letter-spacing: 1px;
+  width: 250px;
+}
+}
+
+@media screen and (min-width: 700px) {
+	#restaurants-list li {
+		width: 45%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	#restaurants-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.filter-options select {
+  font-size: 15pt;
+  letter-spacing: 2px;
+  width: 300px;
+  margin: 15px;
+}
+nav h1 a {
+  
+  font-size: 18pt;
+  font-weight: 600;
+}
+}
