@@ -89,6 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = name.innerHTML + ' logo'; //add alt to image
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -128,7 +129,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
-  title.id = 'ratings';
+  title.id = 'ratings';// add id attr to h2 dynamically
   container.appendChild(title);
 
   if (!reviews) {
