@@ -1,3 +1,14 @@
+// Make sure service workers are supported
+if('serviceWorker' in navigator) {
+	//console.log('service worker is supported');
+	window.addEventListener('load', () => {
+		navigator.serviceWorker
+		.register('../sw_cached.js')
+		.then(reg => console.log('Service Worker: Registered'))
+		.catch(err => console.log(`Service Worker : Error: ${err}`))
+	})
+}
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -36,6 +47,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
+    option.label = neighborhood; //dynamically add label to the select tag
     select.append(option);
   });
 }
@@ -64,6 +76,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+    option.label = cuisine; // dynamically add label attribute
     select.append(option);
   });
 }
@@ -166,14 +179,17 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.label = 'name of restaurant';
   li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.label = 'neighborhood';
   li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.label = 'address';
   li.append(address);
 
   const more = document.createElement('a');
